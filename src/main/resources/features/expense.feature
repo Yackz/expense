@@ -1,4 +1,4 @@
-features: expense
+Feature: expense
     As a user
     I can remove money and view expense
     so that I can know how much money I have

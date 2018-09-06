@@ -1,5 +1,4 @@
-# new feature
-# Tags: optional
+
 Feature: income
     As a user
     I can add money and view the income
@@ -7,6 +6,6 @@ Feature: income
 
 Scenario: Add income
     Given a user have 0 in balance
-    When I add income amount 100 from salary
+    When I earned 100 from work
     Then I have balance amount 100
 

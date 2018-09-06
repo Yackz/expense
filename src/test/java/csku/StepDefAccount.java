@@ -22,26 +22,27 @@ public class StepDefAccount {
         account = new Account(balance);
     }
 
-    @When("I add income amount (\\d+) from (.*) ")
-    public void i_add_income_amount(int income, String desc){
 
+    @When("I earned (\\d+) from (.*)")
+    public void i_earned_from(int income, String desc){
         account.income(desc, income);
     }
 
-
     @When("I expense a money amount (\\d+) from (.*) ")
-    public void i_expense_a_money_amount(int expense, String desc) {
-        account.expense(desc, expense);
+    public void i_expense_a_money(int expense, String desc){
+        account.expense(desc,expense);
     }
 
-    @When("I expense a money more than balance (\\d+) from (.*) ")
+
+    @When("I expense a money more than balance amount (\\d+) from (.*) ")
     public void i_expense_a_money_more_than_balance(int expense, String desc){
         account.expense(desc,expense);
     }
 
-    @Then("I have balance amount (\\d+)")
-    public void i_have_balance_amount(int balance){
+    @Then("I have balance amount (.*)")
+    public void balance_is_minus(int balance){
         assertEquals(balance, account.getBalanceMoney());
+//        account .getBalanceMoney();
     }
 
 
