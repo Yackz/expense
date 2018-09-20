@@ -1,5 +1,8 @@
 package csku;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Account {
@@ -81,5 +84,23 @@ public class Account {
 
     public Boolean getEdit() {
         return edit;
+    }
+
+    public void saveFiles(String filename){
+        File file = new File(filename);
+        FileWriter writer;
+        try {
+            writer = new FileWriter(file, true);
+            for (int i =0; i<transactions.size();i++){
+                writer.write(transactions.get(i).getTypeAccount() + " ");
+                writer.write(transactions.get(i).getDate() + " ");
+                writer.write(transactions.get(i).getDescription() + " ");
+                writer.write(transactions.get(i).getMoney() + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

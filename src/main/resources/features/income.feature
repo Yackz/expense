@@ -6,6 +6,6 @@ Feature: income
 
 Scenario: Add income
     Given a user have 0 in balance
-    When I earned 100 from work
+    When I earned 100 from work at 17/2/61
     Then I have balance amount 100
 

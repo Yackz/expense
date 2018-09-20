@@ -23,22 +23,31 @@ public class StepDefAccount {
     }
 
 
-//    @When("I earned (\\d+) from (.*)")
-//    public void i_earned_from(int income, String desc){
-//        account.income(desc, income);
-//    }
-//
-//    @When("I expense a money amount (\\d+) from (.*) ")
-//    public void i_expense_a_money(int expense, String desc){
-//        account.expense(desc,expense);
-//    }
-//
-//
-//    @When("I expense a money more than balance amount (\\d+) from (.*) ")
-//    public void i_expense_a_money_more_than_balance(int expense, String desc){
-//        account.expense(desc,expense);
-//    }
+    @When("I earned (\\d+) from (.*) at (.*)")
+    public void i_earned_from(int income, String desc,String date){
+        account.income(desc, income,date);
+    }
 
+    @When("I expense a money amount (\\d+) from (.*) at (.*)")
+    public void i_expense_a_money(int expense, String desc,String date){
+        account.expense(desc,expense,date);
+    }
+
+
+    @When("I expense a money more than balance amount (\\d+) from (.*) at (.*)")
+    public void i_expense_a_money_more_than_balance(int expense, String desc,String date){
+        account.expense(desc,expense,date);
+    }
+
+    @When("I edit a money amount 200 from (.*) to (.*) amount (\\d+) at (.*)")
+    public void edit_income(int expense, String desc,String date,String type){
+        account.editMoney(type,desc,expense,date);
+    }
+
+    @When("I edit a money amount 200 from (.*) to (.*)amount (\\d+) at (.*)")
+    public void edit_expense(int expense, String desc,String date,String type){
+        account.editMoney(type,desc,expense,date);
+    }
     @Then("I have balance amount (.*)")
     public void balance_is_minus(int balance){
         assertEquals(balance, account.getBalanceMoney());

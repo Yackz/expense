@@ -1,5 +1,7 @@
 package csku;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class AccountMain {
@@ -66,4 +68,30 @@ public class AccountMain {
         }
 
     }
+    public void readFiles(String filename, Account account) {
+        Scanner in;
+        try {
+            in = new Scanner(new FileReader(filename));
+        } catch (FileNotFoundException e1) {
+            System.out.println("Error opening accounts file.");
+            return;
+        }
+
+        while (in.hasNext())
+        {
+            String type = in.next();
+            String date = in.next();
+            String des = in.next();
+            int money = in.nextInt();
+            if (type.equals("income")){
+                account.income(des,money,date);
+            }else {
+                account.expense(des,money,date);
+            }
+
+        }
+        in.close();
+    }
+
+
 }
