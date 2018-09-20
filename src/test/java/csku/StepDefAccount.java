@@ -23,21 +23,21 @@ public class StepDefAccount {
     }
 
 
-    @When("I earned (\\d+) from (.*)")
-    public void i_earned_from(int income, String desc){
-        account.income(desc, income);
-    }
-
-    @When("I expense a money amount (\\d+) from (.*) ")
-    public void i_expense_a_money(int expense, String desc){
-        account.expense(desc,expense);
-    }
-
-
-    @When("I expense a money more than balance amount (\\d+) from (.*) ")
-    public void i_expense_a_money_more_than_balance(int expense, String desc){
-        account.expense(desc,expense);
-    }
+//    @When("I earned (\\d+) from (.*)")
+//    public void i_earned_from(int income, String desc){
+//        account.income(desc, income);
+//    }
+//
+//    @When("I expense a money amount (\\d+) from (.*) ")
+//    public void i_expense_a_money(int expense, String desc){
+//        account.expense(desc,expense);
+//    }
+//
+//
+//    @When("I expense a money more than balance amount (\\d+) from (.*) ")
+//    public void i_expense_a_money_more_than_balance(int expense, String desc){
+//        account.expense(desc,expense);
+//    }
 
     @Then("I have balance amount (.*)")
     public void balance_is_minus(int balance){
