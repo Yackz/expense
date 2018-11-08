@@ -8,6 +8,7 @@ public class AccountMain {
     public static void main(String[] args) {
         Account account = new Account();
         Scanner scanner = new Scanner(System.in);
+        Writer writer = new Writer();
         while (true){
             System.out.print("Enter the type : income , expenses , edit , slip or exit : " );
             String input = scanner.next();
@@ -19,6 +20,7 @@ public class AccountMain {
                 System.out.println("Enter a money : ");
                 int inputMoney = scanner.nextInt();
                 account.income(descrip,inputMoney,date);
+                writer.add("Income :" + inputMoney + " Date :" +date + " Description : " + descrip);
                 System.out.println("You account have " + account.getBalanceMoney());
             }else if (input.equals("expense")){
                 System.out.println("Enter date (ex. 10/9/61) : ");
@@ -45,6 +47,7 @@ public class AccountMain {
                 System.out.println("Enter a money : ");
                 int inputMoney = scanner.nextInt();
                 account.checkEdit(type,descrip,inputMoney,date);
+                writer.add("Income :" + inputMoney + " Date :" +date + " Description : " + descrip);
                 if (account.getEdit()){
                     System.out.println("Enter new type of money : ");
                     String newType = scanner.next();
