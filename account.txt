@@ -1,2 +1,4 @@
 Income :1000 Date :11/9/61 Description : income
 Income :200 Date :22/9/61 Description : work
+Income :100 Date :22/1/61 Description : test
+Expense :50 Date :21/3/61 Description : test
