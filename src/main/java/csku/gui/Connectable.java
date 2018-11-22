@@ -1,4 +1,4 @@
-package csku;
+package csku.gui;
 
 import javafx.collections.ObservableList;
 

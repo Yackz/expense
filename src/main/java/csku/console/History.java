@@ -1,4 +1,4 @@
-package csku;
+package csku.console;
 
 public class History {
 

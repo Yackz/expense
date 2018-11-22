@@ -1,4 +1,4 @@
-package csku;
+package csku.console;
 
 import java.io.File;
 import java.io.FileWriter;

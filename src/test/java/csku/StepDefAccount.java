@@ -1,5 +1,6 @@
 package csku;
 
+import csku.console.Account;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

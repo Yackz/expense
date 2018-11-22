@@ -1,4 +1,4 @@
-package csku;
+package csku.gui;
 
 public class Data {
     private String type, detail;
