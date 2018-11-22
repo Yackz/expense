@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+>
+   <children>
+      <Button fx:id="swButton" layoutX="362.0" layoutY="335.0" mnemonicParsing="false" text="Change Database">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="addButton" layoutX="389.0" layoutY="210.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="102.0" text="Save">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="totalButton" layoutX="381.0" layoutY="273.0" mnemonicParsing="false" text="Total Money">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="324.0" layoutY="98.0" text="Amount">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="153.0" text="Description">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="43.0" text="Type">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox  layoutX="424.0" layoutY="44.0" prefWidth="150.0" promptText="Type" />
+      <TextField fx:id="amt" layoutX="425.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="describe" layoutX="425.0" layoutY="155.0" prefHeight="25.0" prefWidth="150.0" />
+      <TableView layoutX="14.0" layoutY="28.0" prefHeight="345.0" prefWidth="284.0">
+        <columns>
+          <TableColumn prefWidth="135.0" text="Type" />
+          <TableColumn prefWidth="148.0" text="Money" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
