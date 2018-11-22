@@ -25,7 +25,7 @@ public class FileConnector implements Connectable{
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             while ((line = bufferedReader.readLine()) != null) {
                 String[] tmp = line.split(" ");
-                datas.add(new Data(tmp[0], tmp[1] + " " + tmp[2], tmp[3]));
+                datas.add(new Data(tmp[0], tmp[1], tmp[2]));
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {

@@ -28,8 +28,8 @@ public class DBConnector implements Connectable{
                 ResultSet resultSet = statement.executeQuery(query);
                 while (resultSet.next()) {
                     String type = resultSet.getString("Type");
-                    String detail = resultSet.getString("Detail");
-                    String money = resultSet.getString("Money");
+                    String detail = resultSet.getString("Description");
+                    String money = resultSet.getString("Amount");
                     datas.add(new Data(type, detail, money));
                 }
                 connection.close();
@@ -48,7 +48,7 @@ public class DBConnector implements Connectable{
             Class.forName(myDriver);
             Connection connection = DriverManager.getConnection(urlDB);
             if (connection != null) {
-                String query = "insert into Data (Type, Detail, Money) values ('" + type + "' , '" + detail + "' , '" + amount + "')";
+                String query = "insert into Data (Type, Description, Amount) values ('" + type + "' , '" + detail + "' , '" + amount + "')";
                 PreparedStatement p = connection.prepareStatement(query);
                 p.executeUpdate();
             }

@@ -52,12 +52,13 @@ public class Controller {
     public void showTotal(ActionEvent event) {
         double total = 0;
         for (Data i : connector.viewHistory()) {
-            if (i.getType().equals("Income"))
-                total += Double.valueOf(i.getAmount().substring(1));
-            else if (i.getType().equals("Expense"))
-                total -= Double.valueOf(i.getAmount().substring(1));
+            if (i.getType().equals("Income")) {
+                total += Double.valueOf(i.getAmount().substring(1).trim());
+            }else if (i.getType().equals("Expense"))
+                total -= Double.valueOf(i.getAmount().substring(1).trim());
         }
-        label.setText("Total : " + total);
+        System.out.println(total);
+        label.setText("Total Balance : " + total);
     }
 
     public void switchDB() {

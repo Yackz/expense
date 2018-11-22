@@ -1,1 +1,2 @@
-Income qwe +12
+income hi +100
+income hello +200
